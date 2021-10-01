@@ -1,0 +1,4 @@
+Scraping the web 
+================
+
+1. Refer to next website [http://wiki.stat.ucla.edu/socr/index.php/SOCR_Data_MLB_HeightsWeights]
