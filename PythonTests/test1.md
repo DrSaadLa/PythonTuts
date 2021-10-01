@@ -27,4 +27,4 @@ Max number of participants per project: 1 (Collective projects are not accepted)
 
  - If Python: The file should be in (SOCR_your_name.py) or (SOCR_your_name.ipynb)
 
-# This project is due to 15/10/2021
+# This project is due to 10/10/2021
