@@ -29,6 +29,6 @@ Toots for this project:
   4. Seaborn
 
 
-**The project will be later analyzed using R, SAS, STATA, Excel .... ** 
+**The project will be later analyzed using R, SAS, STATA, Excel ...** 
 
 **The results will be shared later**
