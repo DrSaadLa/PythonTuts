@@ -1,0 +1,13 @@
+prodnum,prodname,manunum,prodtype,prodcost
+1110.0,Dream Machine,111.0,Workstation,3200.0
+1200.0,Business Machine,120.0,Workstation,3300.0
+1700.0,Travel Laptop,170.0,Laptop,3400.0
+2101.0,Analog Cell Phone,210.0,Phone,35.0
+2102.0,Digital Cell Phone,210.0,Phone,175.0
+2200.0,Office Phone,220.0,Phone,130.0
+5001.0,Spreadsheet Software,500.0,Software,299.0
+5002.0,Database Software,500.0,Software,399.0
+5003.0,Wordprocessor Software,500.0,Software,299.0
+6000.0,Internet Software,600.0,Software,99.0
+5004.0,Graphics Software,500.0,Software,299.0
+6001.0,eCommerce Software,600.0,Software,799.0
