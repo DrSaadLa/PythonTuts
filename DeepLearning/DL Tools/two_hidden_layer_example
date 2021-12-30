@@ -1,0 +1,138 @@
+digraph G {
+
+    rankdir=LR
+	splines=line
+    label="Forward Propagation: Two-Hidden Layer" fontcolor=blue fontname="Helvetica Bold"
+    
+        
+        node [label=""];
+
+        subgraph cluster_0 {
+		color=white;
+		node [style=solid, fixedsize=true color=skyblue, shape=circle width=0.6 fontname="Helvetica Bold"];
+		x1[fontsize=22, fontcolor=blue label=4];
+        x2[fontsize=22, fontcolor=blue label=3];
+		label = "Input layer";
+	}
+
+	subgraph cluster_1 {
+		color=white;
+		node [style=solid, fixedsize=true color=red4, shape=circle width=0.6 fontname="Helvetica Bold"];
+		a12[fontsize=22, fontcolor=cyan4 label=5];
+        a22[fontsize=22, fontcolor=cyan4 label=1];
+		label = "Hidden layer 01";
+	}
+    	subgraph cluster_2 {
+		color=white;
+		node [style=solid, fixedsize=true color=red4, shape=circle width=0.6 fontname="Helvetica Bold"];
+		b12[fontsize=22, fontcolor=cyan4 label=13];
+        b22[fontsize=22, fontcolor=cyan4 label=26];
+		label = "Hidden layer 02";
+	}
+
+	subgraph cluster_3 {
+		color=white;
+		node [style=solid,color=seagreen2, shape=circle width=0.6 fontname="Helvetica Bold"];
+		O[fontsize=22, fontcolor=coral4 label=39];
+		label="Output layer";
+	}
+
+        x1 -> a12 [labeldistance=5 fontsize=18 fontcolor="red" fontname="Helvetica Bold"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0" >
+                <tr>
+                    <td>2</td>
+                </tr>
+            </table>
+        > ];
+        x1 -> a22  [labeldistance=7 fontsize=18 fontcolor="green" fontname="Helvetica Bold"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>1</td>
+                </tr>
+            </table>
+        > ];
+        x2 -> a12[labeldistance=7 fontsize=18 fontcolor="red" fontname="Helvetica Bold"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>-1</td>
+                </tr>
+            </table>
+        > ];
+        x2 -> a22[labeldistance=4 fontsize=18 fontcolor="green" fontname="Helvetica Bold"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>-1</td>
+                </tr>
+            </table>
+        > ];
+        
+        a12 -> b12 [labeldistance=4 fontsize=18 fontcolor="firebrick" fontname="Helvetica Bold"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>3</td>
+                </tr>
+            </table>
+        > ];
+        
+        a12 -> b22 [labeldistance=8 fontsize=18 fontcolor="gold4" fontname="Helvetica Bold"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>4</td>
+                </tr>
+            </table>
+        > ];
+        
+        a22 -> b22 [labeldistance=4 fontsize=18 fontcolor="gold4" fontname="Helvetica Bold"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>6</td>
+                </tr>
+            </table>
+        > ];
+        
+        a22 -> b12 [labeldistance=8 fontsize=18 fontcolor="firebrick" fontname="Helvetica Bold"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>-2</td>
+                </tr>
+            </table>
+        > ];
+        
+        
+        b12 -> O [labeldistance=5 fontsize=18 fontcolor="bisque4" fontname="Helvetica Bold"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>-5</td>
+                </tr>
+            </table>
+        > ];
+        
+        b22 -> O [labeldistance=5 fontsize=18 fontcolor="bisque4" fontname="Helvetica Bold"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>4</td>
+                </tr>
+            </table>
+        > ];
+
+}

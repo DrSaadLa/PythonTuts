@@ -1,0 +1,254 @@
+digraph G {
+
+    rankdir=LR
+	splines=line
+    label="Forward Propagation: Two-Hidden Layer Example" fontname="Helvetica Bold"
+        
+        node [label=""];
+
+        subgraph cluster_0 {
+		color=white;
+		node [style=solid, fixedsize=true color=skyblue, shape=circle width=0.7 fontname="Helvetica Bold"];
+		x1[fontsize=22, fontcolor=blue label=7];
+        x2[fontsize=22, fontcolor=blue label=3];
+        x3[fontsize=22, fontcolor=blue label=5];
+		label = "The Input layer";
+	}
+
+	subgraph cluster_1 {
+		color=white;
+		node [style=solid, fixedsize=true  color=red4, shape=circle width=0.7 fontname="Helvetica Bold"];
+		a12[fontsize=22, fontcolor=cyan4 label=7];
+        a22[fontsize=22, fontcolor=cyan4 label=43];
+        a23[fontsize=22, fontcolor=cyan4 label=12];
+		label = "The First Hidden layer";
+	}
+
+    
+    	subgraph cluster_2 {
+		color=white;
+		node [style=solid, fixedsize=true color=red4, shape=circle width=0.7 fontname="Helvetica Bold"];
+		b12[fontsize=22, fontcolor=red label=0];
+        b22[fontsize=22, fontcolor=cyan4 label=11];
+        b23[fontsize=22, fontcolor=cyan4 label=23];
+		label = "The Second Hidden layer";
+	}
+
+	subgraph cluster_3 {
+		color=white;
+		node [style=solid, fixedsize=true color=seagreen2, shape=circle width=0.7 fontname="Helvetica Bold"];
+		O[fontsize=22, fontcolor=coral4 label=24];
+		label="The Output layer";
+	}
+
+
+        x1 -> a12 [labeldistance=11 fontname="Helvetica Bold" fontcolor="red"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0" >
+                <tr>
+                    <td>2</td>
+                </tr>
+            </table>
+        > ];
+        x1 -> a22 [labeldistance=11 fontname="Helvetica Bold" fontcolor="green"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>3</td>
+                </tr>
+            </table>
+        > ];
+        
+        x1 -> a23 [labeldistance=9 fontname="Helvetica Bold" fontcolor="blue"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>-1</td>
+                </tr>
+            </table>
+        > ];
+        
+        x2 -> a12[labeldistance=7 fontname="Helvetica Bold" fontcolor="red"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>1</td>
+                </tr>
+            </table>
+        > ];
+        x2 -> a22 [labeldistance=14 fontname="Helvetica Bold" fontcolor="green"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>4</td>
+                </tr>
+            </table>
+        > ];
+        
+        x2 -> a23 [labeldistance=9 fontname="Helvetica Bold" fontcolor="blue"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>-2</td>
+                </tr>
+            </table>
+        > ];
+        
+         x3 -> a12 [labeldistance=14 fontname="Helvetica Bold" fontcolor="red"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>-2</td>
+                </tr>
+            </table>
+        > ];
+        x3 -> a22[labeldistance=7 fontname="Helvetica Bold" fontcolor="green"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>2</td>
+                </tr>
+            </table>
+        > ];
+        
+        x3 -> a23[labeldistance=9 fontname="Helvetica Bold" fontcolor="blue"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>5</td>
+                </tr>
+            </table>
+        > ];
+        
+        
+        a12 -> b12 [labeldistance=11 fontname="Helvetica Bold" fontcolor="green"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>6</td>
+                </tr>
+            </table>
+        > ];
+        
+        a12 -> b22 [labeldistance=16 fontname="Helvetica Bold" fontcolor="blue"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>6</td>
+                </tr>
+            </table>
+        > ];
+        
+        a12 -> b23 [labeldistance=12 fontname="Helvetica Bold" fontcolor="red"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>6</td>
+                </tr>
+            </table>
+        > ];
+        
+        
+        a22 -> b12 [labeldistance=15 fontname="Helvetica Bold" fontcolor="green"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>-2</td>
+                </tr>
+            </table>
+        > ];
+        
+         a22 -> b22 [labeldistance=11 fontname="Helvetica Bold" fontcolor="blue"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>-1</td>
+                </tr>
+            </table>
+        > ];
+        
+         a22 -> b23 [labeldistance=11 fontname="Helvetica Bold" fontcolor="red"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>-1</td>
+                </tr>
+            </table>
+        > ];
+        
+        
+        a23 -> b12 [labeldistance=13 fontname="Helvetica Bold" fontcolor="green"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>-3</td>
+                </tr>
+            </table>
+        > ];
+        
+         a23 -> b22 [labeldistance=13 fontname="Helvetica Bold" fontcolor="blue"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>1</td>
+                </tr>
+            </table>
+        > ];
+        
+         a23 -> b23 [labeldistance=12 fontname="Helvetica Bold" fontcolor="red"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>2</td>
+                </tr>
+            </table>
+        > ];
+        
+        b12 -> O [labeldistance=4 fontname="Helvetica Bold" fontcolor="cyan4"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>6</td>
+                </tr>
+            </table>
+        > ];
+        b22 -> O [labeldistance=4 fontname="Helvetica Bold" fontcolor="cyan4"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>-2</td>
+                </tr>
+            </table>
+        > ];
+        b23 -> O [labeldistance=3 fontname="Helvetica Bold" fontcolor="cyan4"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>2</td>
+                </tr>
+            </table>
+        > ];
+        
+
+}

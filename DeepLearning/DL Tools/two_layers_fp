@@ -1,0 +1,89 @@
+digraph G {
+
+    rankdir=LR
+	splines=line
+    label="Forward Propagation: Simple Example" fontcolor=blue fontname="Helvetica Bold"
+    
+        
+        node [label=""];
+
+        subgraph cluster_0 {
+		color=white;
+		node [style=solid,color=skyblue, shape=circle border=4 width=0.8 fontname="Helvetica Bold"];
+		x1[fontsize=22, fontcolor=blue label=2];
+        x2[fontsize=22, fontcolor=blue label=3];
+		label = "layer 1 (Input layer)";
+	}
+
+	subgraph cluster_1 {
+		color=white;
+		node [style=solid,color=red4, shape=circle width=0.8 fontname="Helvetica Bold"];
+		a12[fontsize=22, fontcolor=cyan4 label=5];
+        a22[fontsize=22, fontcolor=cyan4 label=1];
+		label = "layer 2 (hidden layer)";
+	}
+
+	subgraph cluster_2 {
+		color=white;
+		node [style=solid,color=seagreen2, shape=circle width=0.8 fontname="Helvetica Bold"];
+		O[fontsize=22, fontcolor=coral4 label=9];
+		label="layer 3 (output layer)";
+	}
+
+        x1 -> a12 [labeldistance=5 fontsize=26 fontcolor="red" fontname="Helvetica Bold"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0" >
+                <tr>
+                    <td>1</td>
+                </tr>
+            </table>
+        > ];
+        x1 -> a22  [labeldistance=8 fontsize=26 fontcolor="green" fontname="Helvetica Bold"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>-1</td>
+                </tr>
+            </table>
+        > ];
+        x2 -> a12[labeldistance=9 fontsize=26 fontcolor="red" fontname="Helvetica Bold"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>1</td>
+                </tr>
+            </table>
+        > ];
+        x2 -> a22[labeldistance=5 fontsize=26 fontcolor="green" fontname="Helvetica Bold"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>1</td>
+                </tr>
+            </table>
+        > ];
+        
+        a12 -> O [labeldistance=5 fontsize=26 fontcolor="darkturquoise" fontname="Helvetica Bold"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>2</td>
+                </tr>
+            </table>
+        > ];
+        a22 -> O [labeldistance=5 fontsize=26 fontcolor="darkturquoise" fontname="Helvetica Bold"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>-1</td>
+                </tr>
+            </table>
+        > ];
+
+}

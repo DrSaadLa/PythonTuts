@@ -1,0 +1,149 @@
+digraph G {
+
+    rankdir=LR
+	splines=line
+        
+        node [label=""];
+
+        subgraph cluster_0 {
+		color=white;
+		node [style=solid,color=skyblue, shape=circle width=0.8 fontname="Helvetica Bold"];
+		x1[fontsize=22, fontcolor=blue label=7];
+        x2[fontsize=22, fontcolor=blue label=3];
+        x3[fontsize=22, fontcolor=blue label=5];
+		label = "layer 1 (Input layer)";
+	}
+
+	subgraph cluster_1 {
+		color=white;
+		node [style=solid, color=red4, shape=circle width=0.8 fontname="Helvetica Bold"];
+		a12[fontsize=22, fontcolor=cyan4 label=5];
+        a22[fontsize=22, fontcolor=cyan4 label=1];
+        a23[fontsize=22, fontcolor=cyan4 label=1];
+		label = "layer 2 (hidden layer)";
+	}
+
+	subgraph cluster_2 {
+		color=white;
+		node [style=solid,color=seagreen2, shape=circle width=0.8 fontname="Helvetica Bold"];
+		O[fontsize=22, fontcolor=coral4 label=9];
+		label="layer 3 (output layer)";
+	}
+
+        x1 -> a12 [labeldistance=9.5 fontname="Helvetica Bold" fontcolor="red"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0" >
+                <tr>
+                    <td>2</td>
+                </tr>
+            </table>
+        > ];
+        x1 -> a22 [labeldistance=10 fontname="Helvetica Bold" fontcolor="red"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>-3</td>
+                </tr>
+            </table>
+        > ];
+        
+        x1 -> a23 [labeldistance=8 fontname="Helvetica Bold" fontcolor="red"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>-1</td>
+                </tr>
+            </table>
+        > ];
+        
+        x2 -> a12[labeldistance=7 fontname="Helvetica Bold" fontcolor="blue"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>1</td>
+                </tr>
+            </table>
+        > ];
+        x2 -> a22 [labeldistance=13 fontname="Helvetica Bold" fontcolor="blue"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>-3</td>
+                </tr>
+            </table>
+        > ];
+        
+        x2 -> a23 [labeldistance=9 fontname="Helvetica Bold" fontcolor="blue"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>-2</td>
+                </tr>
+            </table>
+        > ];
+        
+         x3 -> a12 [labeldistance=13 fontname="Helvetica Bold" fontcolor="green"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>-5</td>
+                </tr>
+            </table>
+        > ];
+        x3 -> a22[labeldistance=7 fontname="Helvetica Bold" fontcolor="green"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>2</td>
+                </tr>
+            </table>
+        > ];
+        
+        x3 -> a23[labeldistance=9 fontname="Helvetica Bold" fontcolor="green"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>-2</td>
+                </tr>
+            </table>
+        > ];
+        
+        
+        a12 -> O [labeldistance=7 fontname="Helvetica Bold" fontcolor="cyan4"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>6</td>
+                </tr>
+            </table>
+        > ];
+        a22 -> O [labeldistance=7 fontname="Helvetica Bold" fontcolor="cyan4"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>-2</td>
+                </tr>
+            </table>
+        > ];
+        a23 -> O [labeldistance=6 fontname="Helvetica Bold" fontcolor="cyan4"
+        labelangle=0
+        headlabel=<
+            <table bgcolor="white" border="0">
+                <tr>
+                    <td>1</td>
+                </tr>
+            </table>
+        > ];
+
+}
